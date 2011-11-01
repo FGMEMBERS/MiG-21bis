@@ -1,0 +1,370 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <sim>
+
+  <description>Mikoyan-Gurevich MiG-21bis</description>
+  <author>Petar Jedvaj (based on David Culp's MiG-21MF)</author>
+  <status>beta</status>
+  <flight-model>jsb</flight-model>
+  <aero>MiG-21bis</aero>
+  
+  <sound>
+    <path>Aircraft/MiG-21bis/Sounds/Sound.xml</path>
+  </sound>
+
+  <startup>
+   <splash-texture>Aircraft/MiG-21bis/Splash.png</splash-texture>
+  </startup>
+
+  <submodels> 
+    <serviceable type="bool">true</serviceable>
+    <path>Aircraft/MiG-21bis/Submodels.xml</path>
+  </submodels>
+
+  <virtual-cockpit archive="y">true</virtual-cockpit>
+  <allow-toggle-cockpit archive="y">false</allow-toggle-cockpit>
+
+  <panel>
+    <visibility archive="y">false</visibility>
+  </panel>
+
+	<view n="0">
+		<internal archive="y">true</internal>
+		<config>
+			<pitch-offset-deg>-22.0</pitch-offset-deg>
+			<x-offset-m archive="y"> 0.00</x-offset-m>
+			<y-offset-m archive="y"> 1.08</y-offset-m>
+			<z-offset-m archive="y">-3.25</z-offset-m>
+			<default-field-of-view-deg type="double">100</default-field-of-view-deg>
+		</config>
+	</view>
+
+  <model>
+   <path>Aircraft/MiG-21bis/Models/MiG-21bis.xml</path>
+  </model>
+
+  <chase-distance-m>-20</chase-distance-m>
+
+  <flaps>
+   <setting>0.000</setting>
+   <setting>0.500</setting> 
+   <setting>1.000</setting> 
+  </flaps>
+  
+  <menubar>
+<default>
+<menu n="100">
+<label>MiG-21bis</label>
+<enabled type="bool">true</enabled>
+<item>
+<label>Select Livery</label>
+<binding>
+<command>nasal</command>
+<script>aircraft.livery.dialog.toggle()</script>
+</binding>
+</item>
+</menu>
+</default>
+</menubar>
+
+  <help>
+   <key>
+    <name>c</name>
+    <desc>Toggle canopy</desc>
+   </key>
+   <key>
+    <name>s</name>
+    <desc>Toggle starter valves</desc>
+   </key>
+   <key>
+    <name>d</name>
+    <desc>Deploy drag parachute</desc>
+   </key>
+   <key>
+    <name>j</name>
+    <desc>Jettison drag parachute</desc>
+   </key>
+   <key>
+    <name>m</name>
+    <desc>Nose wheel steering</desc>
+   </key>
+   <key>
+    <name>e</name>
+    <desc>Gun trigger</desc>
+   </key>
+   <key>
+    <name>f</name>
+    <desc>Fuel tank release</desc>
+   </key>
+   <key>
+    <name>Shift-Q</name>
+    <desc>Fuel cut off</desc>
+   </key>
+  </help>
+
+  <rendering>
+    <redout>
+      <parameters>
+        <blackout-onset-g>4.0</blackout-onset-g>
+        <blackout-complete-g>8.0</blackout-complete-g>
+      </parameters> 
+    </redout>
+  </rendering>
+
+  <multiplay>
+    <generic>
+     <int n="0" type="int">0</int>
+     <int n="1" type="int">0</int>
+     <int n="2" type="int">0</int>
+     <int n="3" type="int">0</int>
+     <int n="4" type="int">0</int>
+     <int n="5" type="int">0</int>
+     <int n="6" type="int">0</int>
+     <int n="7" type="int">0</int>
+     <int n="8" type="int">0</int>
+     <int n="9" type="int">0</int>
+     <int n="10" type="int">0</int>
+     <int n="11" type="int">0</int>
+     <int n="12" type="int">0</int>
+    </generic>
+  </multiplay>
+
+ </sim>
+
+ <controls>
+  <flight>
+   <flaps>0</flaps>
+   <elevator-trim>-0.16</elevator-trim>
+   <chute_jettisoned type="int">0</chute_jettisoned>
+  </flight>
+      <gear>
+        <brake-parking type="double">1</brake-parking>
+    </gear>
+  <lighting>
+   <instruments-norm>0.3</instruments-norm>
+  </lighting>
+  <armament>
+   <gunsight>
+    <power-on type="bool">true</power-on>
+    <intensity type="double">0.3</intensity>
+   </gunsight>
+  </armament>
+ </controls>
+
+ <engines>
+  <engine n="0">
+    <running>true</running>
+  </engine>
+ </engines>
+
+<input>
+ <keyboard>
+
+    <key n="99">
+     <name>c</name>
+     <desc>toggle canopy</desc>
+     <binding>
+       <command>property-toggle</command>
+       <property>fdm/jsbsim/systems/canopy/command</property>
+     </binding>
+    </key>
+    
+  <key n="81">
+   <name>Shift-Q</name>
+   <desc>Fuel cut off</desc>
+   <binding>
+    <condition>
+     <property>/sim/input/selected/engine[0]</property>
+    </condition>
+    <command>property-toggle</command>
+    <property>/controls/engines/engine[0]/cutoff</property>
+   </binding>
+  </key>
+
+ <key n="102">
+  <name>f</name>
+  <desc>Fuel tank release</desc>
+  <binding>
+   <command>property-assign</command>
+   <property>fdm/jsbsim/systems/armament/station3/selected</property>
+   <value type="int">1</value>
+  </binding>
+   <binding>
+     <command>property-assign</command>
+     <property>fdm/jsbsim/systems/armament/release</property>
+     <value>1</value>
+   </binding>
+   <mod-up>
+   <binding>
+     <command>property-assign</command>
+     <property>fdm/jsbsim/systems/armament/release</property>
+     <value>0</value> 
+   </binding>
+   </mod-up>
+ </key>
+
+    <key n="115">
+     <name>s</name>
+     <desc>Toggle starter valves</desc>
+     <binding>
+       <command>property-toggle</command>
+       <property>controls/engines/engine[0]/starter</property>
+     </binding>
+     <binding>
+       <command>property-toggle</command>
+       <property>controls/engines/engine[1]/starter</property>
+     </binding>
+     <mod-up>
+       <binding>
+         <command>null</command>
+       </binding>
+     </mod-up>
+    </key>
+
+    <key n="101">
+     <name>e</name>
+     <desc>Gun trigger</desc> 
+     <binding>
+      <command>property-assign</command>
+      <property>controls/armament/trigger</property>
+      <value>true</value>
+     </binding>
+     <mod-up>
+      <binding>
+       <command>property-assign</command>
+       <property>controls/armament/trigger</property>
+       <value>false</value>
+      </binding> 
+     </mod-up>
+    </key>
+
+   <key n="100">
+     <name>d</name>
+     <desc>Deploy braking parachute</desc>
+     <binding>
+      <command>property-assign</command>
+      <property>fdm/jsbsim/systems/chute/deploy</property>
+      <value type="int">1</value>
+     </binding>
+    </key>
+
+    <key n="106">
+      <name>j</name>
+      <desc>jettison braking parachute</desc>
+      <binding>
+       <command>property-assign</command>
+       <property>fdm/jsbsim/systems/chute/deploy</property>
+       <value type="int">0</value>
+      </binding>
+      <binding>
+       <command>property-assign</command>
+       <property>controls/flight/chute_jettisoned</property>
+       <value type="int">1</value>
+      </binding>
+    </key>
+
+    <key n="109">
+     <name>m</name>
+     <desc>engage nose wheel steering</desc>
+     <binding>
+      <command>property-assign</command>
+      <property>fdm/jsbsim/systems/NWS/engaged</property>
+      <value>1</value> 
+     </binding>
+     <mod-up>
+       <binding>
+        <command>property-assign</command>
+        <property>fdm/jsbsim/systems/NWS/engaged</property>
+        <value>0</value> 
+       </binding>
+     </mod-up>
+    </key>
+
+ </keyboard>
+</input>
+
+<instrumentation>
+  <marker-beacon>
+    <volume type="double" archive="y">0.0</volume>
+  </marker-beacon>
+  <radar>
+    <range type="int" archive="y">20</range>
+    <range-factor type="double" archive="n">0.000444</range-factor>
+    <minimized type="bool" archive="y">false</minimized>
+    <selected type="int">2</selected>
+  </radar>
+  <rdmi-mode type="int">0</rdmi-mode> <!-- 0=TAC, 1=VOR, 2=ADF -->
+</instrumentation>
+
+ <fdm>
+   <jsbsim>
+   <simulation>
+     <sim-time-sec>0</sim-time-sec>
+   </simulation>
+     <systems>
+       <dump>
+         <armed type="double">0</armed>
+       </dump>
+       <NWS>
+         <engaged type="double">0</engaged>
+       </NWS>
+    <canopy>
+      <command type="double">0</command>
+      <position type="double">0</position>
+    </canopy>
+    <armament>
+      <station1>
+        <selected type="double">0</selected>
+      </station1>
+      <station2>
+        <selected type="double">0</selected>
+      </station2>
+      <station3>
+        <selected type="double">0</selected>
+      </station3>
+      <station4>
+        <selected type="double">0</selected>
+      </station4>
+      <station5>
+        <selected type="double">0</selected>
+      </station5>
+    </armament>
+     </systems>
+   </jsbsim>
+ </fdm>
+ 
+ <!-- Effects -->
+
+<gear>
+	<gear n="0">
+		<tyre-smoke type="int">0</tyre-smoke>
+		<sprayspeed-ms type="double">0</sprayspeed-ms>
+		<spray-density type="double">0</spray-density>
+		<caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
+	</gear>
+	<gear n="1">
+		<tyre-smoke type="int">0</tyre-smoke>
+		<sprayspeed-ms type="double">0</sprayspeed-ms>
+		<spray-density type="double">0</spray-density>
+	</gear>
+	<gear n="2">
+		<tyre-smoke type="int">0</tyre-smoke>
+		<sprayspeed-ms type="double">0</sprayspeed-ms>
+		<spray-density type="double">0</spray-density>
+	</gear>
+</gear>
+
+<!-- Nasal -->
+
+<nasal>
+	<MiG-21bis>
+		<file>Aircraft/MiG-21bis/Nasal/liveries.nas</file>
+	</MiG-21bis>
+	<tyresmoke>
+		<file>Aircraft/MiG-21bis/Nasal/tyresmoke.nas</file>
+	</tyresmoke>
+</nasal>
+
+</PropertyList>

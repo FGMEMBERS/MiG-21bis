@@ -1,0 +1,1200 @@
+<PropertyList>
+
+<path>MiG-21bis.ac</path>
+<offsets>
+<pitch-deg>0</pitch-deg>   
+<heading-deg>0</heading-deg>
+<roll-deg>0</roll-deg>
+<x-m>0</x-m>
+<y-m>0</y-m>
+<z-m>-0.04</z-m>
+</offsets>
+
+<nasal>
+<load>
+var livery_update = aircraft.livery_update.new("Aircraft/MiG-21bis/Models/Liveries");
+</load>
+<unload>
+livery_update.stop();
+</unload>
+</nasal>
+
+<animation>
+<type>material</type>
+<object-name>cone</object-name>
+<object-name>hull</object-name>
+<object-name>canopy</object-name>
+<object-name>left_ventral_air_brake</object-name>
+<object-name>right_ventral_air_brake</object-name>
+<object-name>central_air_brake</object-name>
+<object-name>left_gill</object-name>
+<object-name>left_back_gill</object-name>
+<object-name>right_gill</object-name>
+<object-name>right_back_gill</object-name>
+<object-name>rudder</object-name>
+<object-name>hstab</object-name>
+<object-name>right_elevator</object-name>
+<object-name>left_elevator</object-name>
+<object-name>right_door</object-name>
+<object-name>left_door</object-name>
+<object-name>right_inner_door</object-name>
+<object-name>left_inner_door</object-name>
+<object-name>right_outer_door</object-name>
+<object-name>left_outer_door</object-name>
+<object-name>back_right_door</object-name>
+<object-name>back_left_door</object-name>
+<object-name>nose_wheel</object-name>
+<object-name>right_wheel</object-name>
+<object-name>left_wheel</object-name>
+<object-name>wings</object-name>
+<object-name>right_flap</object-name>
+<object-name>left_flap</object-name>
+<object-name>right_aileron</object-name>
+<object-name>left_aileron</object-name>
+<object-name>pylons</object-name>
+<property-base>sim/model/livery</property-base>
+<texture-prop>texture</texture-prop>
+<texture>Aircraft/MiG-21bis/Models/Liveres/Default.png</texture>
+</animation>
+
+<animation>
+<type>material</type>
+<object-name>heat</object-name>
+<texture-prop>texture</texture-prop>
+<texture>Aircraft/MiG-21bis/Models/Effects/Heat.png</texture>
+</animation>
+
+<animation>
+<type>shader</type>
+<shader>chrome</shader>
+<texture>Aircraft/MiG-21bis/Shaders/Glass.png</texture>
+<object-name>glass</object-name>
+<object-name>canopy_glass</object-name>
+</animation>
+
+<animation>
+<type>shader</type>
+<shader>chrome</shader>
+<texture>Aircraft/MiG-21bis/Shaders/Nozzle.png</texture>
+<object-name>nozzle</object-name>
+</animation>
+
+<animation>
+<type>shader</type>
+<shader>chrome</shader>
+<texture>Aircraft/MiG-21bis/Shaders/Chrome.png</texture>
+<object-name>front_strut</object-name>
+<object-name>right_strut</object-name>
+<object-name>right_scissor</object-name>
+<object-name>rightd_strut</object-name>
+<object-name>right_inner_strut</object-name>
+<object-name>left_strut</object-name>
+<object-name>left_scissor</object-name>
+<object-name>leftd_strut</object-name>
+<object-name>left_inner_strut</object-name>
+</animation>
+
+<!-- Submodels -->
+
+<model>
+<name>Fuel Tank</name>
+<path>Aircraft/MiG-21bis/Models/Stores/Tank.xml</path>
+</model>
+
+<model>
+<name>GSh-23 Gun</name>
+<path>Aircraft/MiG-21bis/Models/Stores/GSh-23.xml</path>
+</model>
+
+<model>
+<name>R-60 Missile Left</name>
+<path>Aircraft/MiG-21bis/Models/Stores/R-60L.xml</path>
+</model>
+
+<model>
+<name>R-60 Missile Right</name>
+<path>Aircraft/MiG-21bis/Models/Stores/R-60R.xml</path>
+</model>
+
+<!-- Instruments  -->
+
+<model>
+<name>Stick</name>
+<path>Aircraft/MiG-21bis/Models/Instruments/Stick/stick.xml</path>
+<offsets>
+<x-m>-3.58</x-m>
+<y-m> 0.00</y-m>
+<z-m> 0.10</z-m>
+</offsets>
+</model>
+
+<model>
+<name>Pedals</name>
+<path>Aircraft/MiG-21bis/Models/Instruments/Pedals/pedals.xml</path>
+<offsets>
+<x-m>-4.00</x-m>
+<y-m> 0.00</y-m>
+<z-m> 0.17</z-m>
+</offsets>
+</model>
+
+<model>
+<name>Throttle</name>
+<path>Aircraft/MiG-21bis/Models/Instruments/Throttle/throttle.xml</path>
+<offsets>
+<x-m> 0.00</x-m>
+<y-m>-0.02</y-m>
+<z-m> 0.03</z-m>
+</offsets>
+</model>
+
+<model>
+<name>Gearhandle</name>
+<path>Aircraft/MiG-21bis/Models/Instruments/Gear/Gear.xml</path>
+<offsets>
+<x-m>-3.72</x-m>
+<y-m>-0.26</y-m>
+<z-m> 0.555</z-m>
+<heading-deg>20</heading-deg>
+</offsets>
+</model>
+
+<model>
+<name>Gunsight</name>
+<path>Aircraft/MiG-21bis/Models/Instruments/Gunsight/Gunsight.xml</path>
+<offsets>
+<x-m> 0.00</x-m>
+<y-m> 0.00</y-m>
+<z-m> 0.00</z-m>
+</offsets>
+</model>
+
+<model>
+<name>Radar</name>
+<path>Aircraft/MiG-21bis/Models/Instruments/Radar/radar.xml</path>
+<offsets>
+<pitch-deg>-35</pitch-deg>
+<x-m>-3.76</x-m>
+<y-m> 0.10</y-m>
+<z-m> 0.68</z-m>
+</offsets>
+</model>
+
+<model>
+<name>Flaps</name>
+<path>Aircraft/MiG-21bis/Models/Instruments/Flaps/Flaps.xml</path>
+<offsets>
+<x-m>-3.79</x-m>
+<y-m>-0.25</y-m>
+<z-m> 0.90</z-m>
+<heading-deg>20</heading-deg>
+</offsets>
+</model>
+
+<model>
+<name>G Meter</name>
+<path>Aircraft/MiG-21bis/Models/Instruments/GMeter/GMeter.xml</path>
+<offsets>
+<x-m>-4.11</x-m>
+<y-m>-0.13</y-m>
+<z-m> 1.14</z-m>
+</offsets>
+</model>
+
+<model>
+<name>Fuel Switch</name>
+<path>Aircraft/MiG-21bis/Models/Instruments/FuelSwitch/FuelSwitch.xml</path>
+<offsets>
+<x-m>-3.73</x-m>
+<y-m> 0.32</y-m>
+<z-m> 0.835</z-m>
+<pitch-deg>90</pitch-deg>
+<heading-deg>-20</heading-deg>
+</offsets>
+</model>
+
+<model>
+<name>Attitude Indicator</name>
+<path>Aircraft/MiG-21bis/Models/Instruments/AI/AI.xml</path>
+<offsets>
+<x-m>-3.80</x-m>
+<y-m>-0.16</y-m>
+<z-m> 0.74</z-m>
+</offsets>
+</model>
+
+<model>
+<name>Altimeter</name>
+<path>Aircraft/MiG-21bis/Models/Instruments/ALT/ALT.xml</path>
+<offsets>
+<x-m>-3.80</x-m>
+<y-m>-0.16</y-m>
+<z-m> 0.635</z-m>
+</offsets>
+</model>
+
+<model>
+<name>Radio Magnetic Indicator</name>
+<path>Aircraft/MiG-21bis/Models/Instruments/RDMI/RDMI.xml</path>
+<offsets>
+<x-m>-3.77</x-m>
+<y-m>-0.15</y-m>
+<z-m> 0.56</z-m>
+</offsets>
+</model>
+
+<model>
+<name>Fuel</name>
+<path>Aircraft/MiG-21bis/Models/Instruments/Fuel/Fuel.xml</path>
+<offsets>
+<x-m>-3.77</x-m>
+<y-m> 0.27</y-m>
+<z-m> 0.73</z-m>
+<heading-deg>-20</heading-deg>
+</offsets>
+</model>
+
+<model>
+<name>N2</name>
+<path>Aircraft/MiG-21bis/Models/Instruments/N2/N2.xml</path>
+<offsets>
+<x-m>-3.77</x-m>
+<y-m>-0.08</y-m>
+<z-m> 0.61</z-m>
+</offsets>
+</model>
+
+<model>
+<name>Airspeed Indicator</name>
+<path>Aircraft/MiG-21bis/Models/Instruments/ASI/ASI.xml</path>
+<offsets>
+<x-m>-3.77</x-m>
+<y-m>-0.28</y-m>
+<z-m> 0.77</z-m>
+<heading-deg>20</heading-deg>
+</offsets>
+</model>
+
+<model>
+<name>Heading Indicator</name>
+<path>Aircraft/MiG-21bis/Models/Instruments/HI/hi.xml</path>
+<offsets>
+<x-m>-3.77</x-m>
+<y-m>-0.28</y-m>
+<z-m> 0.665</z-m>
+<heading-deg>20</heading-deg>
+</offsets>
+</model>
+
+<model>
+<name>Vertical Speed Indicator</name>
+<path>Aircraft/MiG-21bis/Models/Instruments/VSI/VSI.xml</path>
+<offsets>
+<x-m>-3.77</x-m>
+<y-m>-0.01</y-m>
+<z-m> 0.58</z-m>
+</offsets>
+</model>
+
+<model>
+<name>Turn and Bank Indicator</name>
+<path>Aircraft/Instruments-3d/tc/tc.xml</path>
+<offsets>
+<x-m>-3.77</x-m>
+<y-m>-0.04</y-m>
+<z-m> 0.71</z-m>
+</offsets>
+</model>
+
+<model>
+<name>Chronograph</name>
+<path>Aircraft/MiG-21bis/Models/Instruments/Chronograph/Chronograph.xml</path>
+<offsets>
+<x-m>-3.75</x-m>
+<y-m> 0.27</y-m>
+<z-m> 0.625</z-m>
+<heading-deg>-20</heading-deg>
+</offsets>
+</model>
+
+<!-- Animations  -->
+
+<animation>
+<type>rotate</type>
+<object-name>canopy_glass</object-name>
+<object-name>canopy</object-name>
+<object-name>arch</object-name>
+<property>canopy/position-norm</property>
+<factor>80.00</factor>
+<axis>
+<x1-m> -3.05</x1-m>
+<y1-m>  0.37</y1-m>
+<z1-m>  0.86</z1-m>
+<x2-m> -3.39</x2-m>
+<y2-m>  0.39</y2-m>
+<z2-m>  0.84</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>central_air_brake</object-name>
+<property>surface-positions/speedbrake-pos-norm</property>
+<factor>35.00</factor>
+<axis>
+<x1-m> 0.88</x1-m>
+<y1-m>-0.09</y1-m>
+<z1-m>-0.37</z1-m>
+<x2-m> 0.88</x2-m>
+<y2-m> 0.09</y2-m>
+<z2-m>-0.37</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>right_ventral_air_brake</object-name>
+<property>surface-positions/speedbrake-pos-norm</property>
+<factor>-35.00</factor>
+<axis>
+<x1-m>-2.77</x1-m>
+<y1-m> 0.50</y1-m>
+<z1-m>-0.05</z1-m>
+<x2-m>-2.77</x2-m>
+<y2-m> 0.26</y2-m>
+<z2-m>-0.28</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>left_ventral_air_brake</object-name>
+<property>surface-positions/speedbrake-pos-norm</property>
+<factor>35.00</factor>
+<axis>
+<x1-m>-2.77</x1-m>
+<y1-m>-0.50</y1-m>
+<z1-m>-0.05</z1-m>
+<x2-m>-2.77</x2-m>
+<y2-m>-0.26</y2-m>
+<z2-m>-0.28</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>rudder</object-name>
+<property>surface-positions/rudder-pos-norm</property>
+<factor>25</factor>
+<axis>
+<x1-m>5.19</x1-m>
+<y1-m>0.00</y1-m>
+<z1-m>1.10</z1-m>
+<x2-m>6.69</x2-m>
+<y2-m>0.00</y2-m>
+<z2-m>2.60</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>left_elevator</object-name>
+<object-name>right_elevator</object-name>
+<property>surface-positions/elevator-pos-norm</property>
+<factor>15.00</factor>
+<offset-deg>0.00</offset-deg>   
+<center>
+<x-m>4.99</x-m>
+<y-m>0.00</y-m>
+<z-m>0.30</z-m>
+</center>
+<axis>
+<x>0.00</x>
+<y>1.00</y>
+<z>0.00</z>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>right_flap</object-name>
+<property>surface-positions/flap-pos-norm</property>
+<factor>30.00</factor>
+<axis>
+<x1-m> 1.98</x1-m>
+<y1-m> 0.65</y1-m>
+<z1-m> 0.14</z1-m>
+<x2-m> 1.98</x2-m>
+<y2-m> 1.99</y2-m>
+<z2-m> 0.09</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>left_flap</object-name>
+<property>surface-positions/flap-pos-norm</property>
+<factor>-30.00</factor>
+<axis>
+<x1-m> 1.98</x1-m>
+<y1-m>-0.65</y1-m>
+<z1-m> 0.14</z1-m>
+<x2-m> 1.98</x2-m>
+<y2-m>-1.99</y2-m>
+<z2-m> 0.09</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>right_aileron</object-name>
+<property>surface-positions/right-aileron-pos-norm</property>
+<factor>-15.00</factor>
+<axis>
+<x1-m> 2.03</x1-m>
+<y1-m> 2.10</y1-m>
+<z1-m> 0.09</z1-m>
+<x2-m> 2.38</x2-m>
+<y2-m> 3.34</y2-m>
+<z2-m> 0.04</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>left_aileron</object-name>
+<property>surface-positions/left-aileron-pos-norm</property>
+<factor>-15.00</factor>
+<axis>
+<x1-m> 2.03</x1-m>
+<y1-m>-2.10</y1-m>
+<z1-m> 0.09</z1-m>
+<x2-m> 2.38</x2-m>
+<y2-m>-3.34</y2-m>
+<z2-m> 0.04</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>right_door</object-name>
+<property>gear/gear[0]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>0</dep>
+</entry>
+<entry>
+<ind>0.5</ind>
+<dep>90</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>90</dep>
+</entry>
+</interpolation>
+<axis>
+<x1-m>-5.64</x1-m>
+<y1-m> 0.17</y1-m>
+<z1-m>-0.28</z1-m>
+<x2-m>-4.61</x2-m>
+<y2-m> 0.18</y2-m>
+<z2-m>-0.31</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>right_gill</object-name>
+<property>gear/gear[2]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>0</dep>
+</entry>
+<entry>
+<ind>0.5</ind>
+<dep>30</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>30</dep>
+</entry>
+</interpolation>
+<axis>
+<x1-m>-5.73</x1-m>
+<y1-m> 0.55</y1-m>
+<z1-m> 0.22</z1-m>
+<x2-m>-5.73</x2-m>
+<y2-m> 0.52</y2-m>
+<z2-m> 0.06</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>left_gill</object-name>
+<property>gear/gear[1]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>0</dep>
+</entry>
+<entry>
+<ind>0.5</ind>
+<dep>-30</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>-30</dep>
+</entry>
+</interpolation>
+<axis>
+<x1-m>-5.73</x1-m>
+<y1-m>-0.55</y1-m>
+<z1-m> 0.22</z1-m>
+<x2-m>-5.73</x2-m>
+<y2-m>-0.52</y2-m>
+<z2-m> 0.06</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>right_back_gill</object-name>
+<property>gear/gear[2]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>0</dep>
+</entry>
+<entry>
+<ind>0.5</ind>
+<dep>30</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>30</dep>
+</entry>
+</interpolation>
+<axis>
+<x1-m>-3.40</x1-m>
+<y1-m> 0.60</y1-m>
+<z1-m> 0.12</z1-m>
+<x2-m>-3.40</x2-m>
+<y2-m> 0.54</y2-m>
+<z2-m>-0.05</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>left_back_gill</object-name>
+<property>gear/gear[1]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>0</dep>
+</entry>
+<entry>
+<ind>0.5</ind>
+<dep>-30</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>-30</dep>
+</entry>
+</interpolation>
+<axis>
+<x1-m>-3.40</x1-m>
+<y1-m>-0.60</y1-m>
+<z1-m> 0.12</z1-m>
+<x2-m>-3.40</x2-m>
+<y2-m>-0.54</y2-m>
+<z2-m>-0.05</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>left_door</object-name>
+<property>gear/gear[0]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>0</dep>
+</entry>
+<entry>
+<ind>0.5</ind>
+<dep>-90</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>-90</dep>
+</entry>
+</interpolation>
+<axis>
+<x1-m>-5.64</x1-m>
+<y1-m>-0.17</y1-m>
+<z1-m>-0.28</z1-m>
+<x2-m>-4.61</x2-m>
+<y2-m>-0.18</y2-m>
+<z2-m>-0.31</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>right_inner_door</object-name>
+<property>gear/gear[2]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>0</dep>
+</entry>
+<entry>
+<ind>0.5</ind>
+<dep>-96</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>-96</dep>
+</entry>
+</interpolation>
+<axis>
+<x1-m>-0.64</x1-m>
+<y1-m> 0.18</y1-m>
+<z1-m>-0.36</z1-m>
+<x2-m> 0.54</x2-m>
+<y2-m> 0.18</y2-m>
+<z2-m>-0.37</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>left_inner_door</object-name>
+<property>gear/gear[1]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>0</dep>
+</entry>
+<entry>
+<ind>0.5</ind>
+<dep>96</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>96</dep>
+</entry>
+</interpolation>
+<axis>
+<x1-m>-0.64</x1-m>
+<y1-m>-0.18</y1-m>
+<z1-m>-0.36</z1-m>
+<x2-m> 0.54</x2-m>
+<y2-m>-0.18</y2-m>
+<z2-m>-0.37</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>nose_wheel</object-name>
+<object-name>front_strut</object-name>
+<condition>
+<greater-than>
+<property>gear/gear[0]/position-norm</property>
+<value>0</value>
+</greater-than>
+</condition>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>right_strut</object-name>
+<object-name>left_strut</object-name>
+<object-name>right_wheel</object-name>
+<object-name>left_wheel</object-name>
+<object-name>rightd_strut</object-name>
+<object-name>leftd_strut</object-name>
+<object-name>right_scissor</object-name>
+<object-name>left_scissor</object-name>
+<object-name>right_inner_strut</object-name>
+<object-name>left_inner_strut</object-name>
+<condition>
+<greater-than>
+<property>gear/gear[0]/position-norm</property>
+<value>0.15</value>
+</greater-than>
+</condition>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>nose_wheel</object-name>
+<object-name>front_strut</object-name>
+<property>gear/gear[0]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>-110</dep>
+</entry>
+<entry>
+<ind>0.5</ind>
+<dep>-110</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>0</dep>
+</entry>
+</interpolation>
+<center>
+<x-m>-4.43</x-m>
+<y-m> 0.00</y-m>
+<z-m> 0.00</z-m>
+</center>
+<axis>
+<x> 0</x>
+<y>-1</y>
+<z> 0</z>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>nose_wheel</object-name>
+<object-name>front_strut</object-name>
+<property>surface-positions/rudder-pos-norm</property>
+<factor>25</factor>
+<center>
+<x-m>-4.43</x-m>
+<y-m> 0.00</y-m>
+<z-m> 0.04</z-m>
+</center>
+<axis>
+<x>0.0</x>
+<y>0.0</y>
+<z>1.0</z>
+</axis>
+</animation>
+
+<animation>
+<type>spin</type>
+<object-name>nose_wheel</object-name>
+<property>fdm/jsbsim/gear/unit[0]/wheel-speed-fps</property>
+<factor>-48.0</factor>
+<axis>
+<x1-m>-4.17</x1-m>
+<y1-m>-0.07</y1-m>
+<z1-m>-1.12</z1-m>   
+<x2-m>-4.17</x2-m>
+<y2-m> 0.07</y2-m>
+<z2-m>-1.12</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>right_strut</object-name>
+<object-name>rightd_strut</object-name>
+<object-name>right_scissor</object-name>
+<object-name>right_wheel</object-name>
+<object-name>right_inner_strut</object-name>
+<property>gear/gear[2]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>92</dep>
+</entry>
+<entry>
+<ind>0.5</ind>
+<dep>92</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>0</dep>
+</entry>
+</interpolation>
+<axis>
+<x1-m> 0.66</x1-m>
+<y1-m> 1.59</y1-m>
+<z1-m> 0.11</z1-m>
+<x2-m> 0.50</x2-m>
+<y2-m> 1.75</y2-m>
+<z2-m> 0.11</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>right_inner_strut</object-name>
+<property>gear/gear[2]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>-125</dep>
+</entry>
+<entry>
+<ind>0.5</ind>
+<dep>-125</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>0</dep>
+</entry>
+</interpolation>
+<axis>   
+<x1-m> 0.66</x1-m>
+<y1-m> 1.59</y1-m>
+<z1-m>-0.19</z1-m>
+<x2-m> 0.50</x2-m>
+<y2-m> 1.75</y2-m>
+<z2-m>-0.19</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>translate</type>
+<object-name>rightd_strut</object-name>
+<object-name>right_wheel</object-name>
+<property>gear/gear[2]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>-0.35</dep>
+</entry>
+<entry>
+<ind>0.5</ind>
+<dep>-0.35</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>0</dep>
+</entry>
+</interpolation>
+<axis>
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>right_wheel</object-name>
+<property>gear/gear[2]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>92</dep>
+</entry>
+<entry>
+<ind>0.5</ind>
+<dep>92</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>0</dep>
+</entry>
+</interpolation>
+<axis>
+<x1-m> 0.60</x1-m>
+<y1-m> 1.69</y1-m>
+<z1-m>-0.95</z1-m>
+<x2-m> 0.68</x2-m>
+<y2-m> 1.59</y2-m>
+<z2-m>-0.95</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>spin</type>
+<object-name>right_wheel</object-name>
+<property>fdm/jsbsim/gear/unit[2]/wheel-speed-fps</property>
+<factor>48.0</factor>
+<axis>
+<x1-m> 0.62</x1-m>
+<y1-m> 1.36</y1-m>
+<z1-m>-0.97</z1-m>   
+<x2-m> 0.62</x2-m>
+<y2-m> 1.60</y2-m>
+<z2-m>-0.97</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>left_strut</object-name>
+<object-name>leftd_strut</object-name>
+<object-name>left_scissor</object-name>
+<object-name>left_wheel</object-name>
+<object-name>left_inner_strut</object-name>
+<property>gear/gear[1]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>-92</dep>
+</entry>
+<entry>
+<ind>0.5</ind>
+<dep>-92</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>0</dep>
+</entry>
+</interpolation>
+<axis>
+<x1-m> 0.66</x1-m>
+<y1-m>-1.59</y1-m>
+<z1-m> 0.11</z1-m>
+<x2-m> 0.50</x2-m>
+<y2-m>-1.75</y2-m>
+<z2-m> 0.11</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>left_inner_strut</object-name>
+<property>gear/gear[1]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>125</dep>
+</entry>
+<entry>
+<ind>0.5</ind>
+<dep>125</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>0</dep>
+</entry>
+</interpolation>
+<axis>   
+<x1-m> 0.66</x1-m>
+<y1-m>-1.59</y1-m>
+<z1-m>-0.19</z1-m>
+<x2-m> 0.50</x2-m>
+<y2-m>-1.75</y2-m>
+<z2-m>-0.19</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>translate</type>
+<object-name>leftd_strut</object-name>
+<object-name>left_wheel</object-name>
+<property>gear/gear[1]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>-0.35</dep>
+</entry>
+<entry>
+<ind>0.5</ind>
+<dep>-0.35</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>0</dep>
+</entry>
+</interpolation>
+<axis>
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>left_wheel</object-name>
+<property>gear/gear[1]/position-norm</property>
+<interpolation>
+<entry>
+<ind>0.0</ind>
+<dep>-92</dep>
+</entry>
+<entry>
+<ind>0.5</ind>
+<dep>-92</dep>
+</entry>
+<entry>
+<ind>1.0</ind>
+<dep>0</dep>
+</entry>
+</interpolation>
+<axis>
+<x1-m> 0.60</x1-m>
+<y1-m>-1.69</y1-m>
+<z1-m>-0.95</z1-m>
+<x2-m> 0.68</x2-m>
+<y2-m>-1.59</y2-m>
+<z2-m>-0.95</z2-m>
+</axis>
+</animation>
+
+<animation>
+<type>spin</type>
+<object-name>left_wheel</object-name>
+<property>fdm/jsbsim/gear/unit[2]/wheel-speed-fps</property>
+<factor>-48.0</factor>
+<axis>
+<x1-m> 0.62</x1-m>
+<y1-m>-1.36</y1-m>
+<z1-m>-0.97</z1-m>   
+<x2-m> 0.62</x2-m>
+<y2-m>-1.60</y2-m>
+<z2-m>-0.97</z2-m>
+</axis>
+</animation>
+
+<!-- Effects -->
+
+<model>
+<name>engine-on-fire</name>
+<path>Aircraft/MiG-21bis/Models/Effects/fire.xml</path>
+<condition>
+<equals>
+<property>sim/crashed</property>
+<value type="bool">true</value>
+</equals>
+</condition>
+<offsets>
+<x-m> 4.21</x-m>
+<y-m> 0.00</y-m>
+<z-m> 0.16</z-m>
+<heading-deg>0</heading-deg>
+<roll-deg>0</roll-deg>
+<pitch-deg>0</pitch-deg>
+</offsets>
+</model>
+
+<model>
+<name>cockpit-on-fire</name>
+<path>Aircraft/MiG-21bis/Models/Effects/fire.xml</path>
+<condition>
+<equals>
+<property>sim/crashed</property>
+<value type="bool">true</value>
+</equals>
+</condition>
+<offsets>
+<x-m>-4.19</x-m>
+<y-m> 0.00</y-m>
+<z-m> 0.34</z-m>
+<heading-deg>0</heading-deg>
+<roll-deg>0</roll-deg>
+<pitch-deg>0 </pitch-deg>
+</offsets>
+</model>
+
+<model>
+<path>Aircraft/MiG-21bis/Models/Stores/Chute.xml</path>
+<offsets>
+<x-m>6.44</x-m>
+<y-m>0.00</y-m>
+<z-m>0.80</z-m>
+<pitch-deg>0.00</pitch-deg>
+</offsets>
+</model>
+
+<model>
+<path>Aircraft/Generic/Effects/tyre-smoke-nose.xml</path>
+<name>tyre-smoke-n</name>
+<offsets>
+<x-m>-4.17</x-m>
+<y-m> 0.00</y-m>
+<z-m>-1.12</z-m>
+</offsets>
+</model>
+
+<model>
+<path>Aircraft/Generic/Effects/tyre-smoke-port.xml</path>
+<name>tyre-smoke-p</name>
+<offsets>
+<x-m> 0.62</x-m>
+<y-m>-1.47</y-m>
+<z-m>-0.97</z-m>
+</offsets>
+</model>
+
+<model>
+<path>Aircraft/Generic/Effects/tyre-smoke-stbd.xml</path>
+<name>tyre-smoke-s</name>
+<offsets>
+<x-m> 0.62</x-m>
+<y-m> 1.47</y-m>
+<z-m>-0.97</z-m>
+</offsets>
+</model>
+
+<model>
+<path>Aircraft/MiG-21bis/Models/Effects/Condensation-Left.xml</path>
+<offsets>
+<x-m> 2.77</x-m>
+<y-m>-3.73</y-m>
+<z-m> 0.02</z-m>
+</offsets>
+</model>
+
+<model>
+<path>Aircraft/MiG-21bis/Models/Effects/Condensation-Right.xml</path>
+<offsets>
+<x-m>2.77</x-m>
+<y-m>3.73</y-m>
+<z-m>0.02</z-m>
+</offsets>
+</model>
+
+<model>
+<path>Aircraft/MiG-21bis/Models/Effects/Plume.xml</path>
+<offsets>
+<x-m>0.00</x-m>
+<y-m>0.00</y-m>
+<z-m>0.00</z-m>
+<pitch-deg>0.00</pitch-deg>
+</offsets>
+</model>
+
+<model>
+<path>Aircraft/MiG-21bis/Models/Effects/Contrail.xml</path>
+<offsets>
+<x-m> 5.60 </x-m>
+<y-m> 0.00 </y-m>
+<z-m> 0.18 </z-m>
+</offsets>
+</model>
+
+<animation>
+<type>noshadow</type>
+<object-name>glass</object-name>
+<object-name>canopy_glass</object-name>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>heat</object-name>
+<condition>
+<property>/engines/engine[0]/running</property>
+<not>
+<property>fdm/jsbsim/systems/crash-detect/crashed</property>
+</not>
+</condition>
+</animation>
+
+<animation>
+<type>material</type>
+<object-name>heat</object-name>
+<emission>
+<red>255</red>
+<green>255</green>
+<blue>254</blue>
+</emission>
+</animation>
+
+</PropertyList>
