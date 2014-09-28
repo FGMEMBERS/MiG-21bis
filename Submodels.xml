@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <PropertyList>
 
 <submodel>
@@ -129,6 +130,8 @@
 </submodel>
 
 =======
+=======
+>>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
 <PropertyList>
 
 	<submodel>
@@ -355,5 +358,8 @@
         <impact>false</impact>
     </submodel>
 
+<<<<<<< HEAD
+>>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
+=======
 >>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
 </PropertyList>
