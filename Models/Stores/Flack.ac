@@ -4,13 +4,13 @@ OBJECT world
 kids 1
 OBJECT poly
 name "rect"
-texture "Flack.rgb"
+texture "Flack.png"
 crease 45.000000
 numvert 4
-1.98 -1.98 8.65485e-008
--1.98 -1.98 -8.65485e-008
--1.98 1.98 -8.65485e-008
-1.98 1.98 8.65485e-008
+1.98 -1.98 8.65485e-08
+-1.98 -1.98 -8.65485e-08
+-1.98 1.98 -8.65485e-08
+1.98 1.98 8.65485e-08
 numsurf 2
 SURF 0x20
 mat 0
