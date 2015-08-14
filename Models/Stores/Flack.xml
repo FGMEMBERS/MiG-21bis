@@ -1,10 +1,10 @@
 <PropertyList>
 
-<path>Flack.ac</path>
+    <path>Flack.ac</path>
 
-<animation>
-<type>billboard</type>
-<spherical>true</spherical>
-</animation>
+    <animation>
+        <type>billboard</type>
+        <spherical>true</spherical>
+    </animation>
 
 </PropertyList>
