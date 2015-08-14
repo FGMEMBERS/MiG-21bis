@@ -1,33 +1,14 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="http://jsbsim.sourceforge.net/JSBSim.xsl"?>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
-=======
-
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
 <fdm_config name="MiG-21bis" version="2.0" release="ALPHA"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
 
  <fileheader>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <author> Aeromatic v 0.9 </author>
-  <filecreationdate> 17-02-2011 </filecreationdate>
-  <version> 1.9 $ </version>
-=======
   <author> David Culp, Petar Jedvaj </author>
   <filecreationdate> 26-08-2012 </filecreationdate>
   <version>1.9.1</version>
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
-=======
-  <author> David Culp, Petar Jedvaj </author>
-  <filecreationdate> 26-08-2012 </filecreationdate>
-  <version>1.9.1</version>
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
   <description> MiG-21bis </description>
  </fileheader>
 
@@ -65,67 +46,31 @@
    <ixz unit="SLUG*FT2">         0 </ixz>
    <iyz unit="SLUG*FT2">         0 </iyz>
    <emptywt unit="LBS" >     12882 </emptywt>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
    
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
-=======
-   
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
    <location name="CG" unit="IN">
      <x> 297.00 </x>
      <y>   0.00 </y>
      <z>  -4.00 </z>
    </location>
-<<<<<<< HEAD
-<<<<<<< HEAD
-   <pointmass name="station1"><!-- left wing outboard pylon -->
-      <weight unit="LBS"> 0 </weight>
-=======
    
    <pointmass name="station1"><!-- left wing outboard pylon -->
       <weight unit="LBS"> 6 </weight>
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
-=======
-   
-   <pointmass name="station1"><!-- left wing outboard pylon -->
-      <weight unit="LBS"> 6 </weight>
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
       <location name="POINTMASS" unit="IN">
           <x>  308 </x>
           <y> -120 </y>
           <z>  -10 </z>
       </location>
    </pointmass>
-<<<<<<< HEAD
-<<<<<<< HEAD
-   <pointmass name="station2"><!-- left wing inboard pylon -->
-      <weight unit="LBS"> 0 </weight>
-=======
    
    <pointmass name="station2"><!-- left wing inboard pylon -->
       <weight unit="LBS"> 520 </weight>
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
-=======
-   
-   <pointmass name="station2"><!-- left wing inboard pylon -->
-      <weight unit="LBS"> 520 </weight>
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
       <location name="POINTMASS" unit="IN">
           <x>  300 </x>
           <y> -100 </y>
           <z>  -10 </z>
       </location>
    </pointmass>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
    
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
-=======
-   
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
    <pointmass name="station3"><!-- empty centerline fuel tank -->
       <weight unit="LBS"> 180 </weight>
       <location name="POINTMASS" unit="IN">
@@ -134,40 +79,18 @@
           <z>  -30 </z>
       </location>
    </pointmass>
-<<<<<<< HEAD
-<<<<<<< HEAD
-   <pointmass name="station4"><!-- right wing inboard pylon -->
-      <weight unit="LBS"> 0 </weight>
-=======
    
    <pointmass name="station4"><!-- right wing inboard pylon -->
       <weight unit="LBS"> 520 </weight>
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
-=======
-   
-   <pointmass name="station4"><!-- right wing inboard pylon -->
-      <weight unit="LBS"> 520 </weight>
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
       <location name="POINTMASS" unit="IN">
           <x>  300 </x>
           <y>  100 </y>
           <z>  -10 </z>
       </location>
    </pointmass>
-<<<<<<< HEAD
-<<<<<<< HEAD
-   <pointmass name="station5"><!-- right wing outboard pylon -->
-      <weight unit="LBS"> 0 </weight>
-=======
    
    <pointmass name="station5"><!-- right wing outboard pylon -->
       <weight unit="LBS"> 6 </weight>
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
-=======
-   
-   <pointmass name="station5"><!-- right wing outboard pylon -->
-      <weight unit="LBS"> 6 </weight>
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
       <location name="POINTMASS" unit="IN">
           <x>  308 </x>
           <y>  120 </y>
@@ -271,23 +194,9 @@
     <spring_coeff unit="LBS/FT">      40000.00 </spring_coeff>
     <damping_coeff unit="LBS/FT/SEC"> 40000.00 </damping_coeff>
  </contact>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
  </ground_reactions>
 
  <propulsion>
-
-=======
- </ground_reactions>
-
- <propulsion>
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
-=======
- </ground_reactions>
-
- <propulsion>
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
    <engine file="Tumansky">
     <location unit="IN">
       <x> 560.40 </x>
@@ -337,29 +246,6 @@
   </tank>
 
   <dump-rate unit="LBS/MIN"> 1500 </dump-rate>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
- </propulsion>
-
- <system file="gear"/> 
- <system file="flaps"/> 
- <system file="speedbrakes"/>
- <system file="FCS-pitch"/>
- <system file="FCS-roll"/>
- <system file="FCS-yaw"/>
- <system file="NWS"/>
- <system file="alpha_buffet"/>
- <system file="chute"/>
- <system file="dump"/>
- <system file="crash-detect"/>
- <system file="armament"/>
- <system file="canopy"/>
- <system file="particles"/>
-
-=======
-=======
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
  </propulsion>
 
  <system file="Gear"/> 
@@ -374,10 +260,6 @@
  <system file="Armament"/>
  <system file="Canopy"/>
  <system file="Particles"/>
-<<<<<<< HEAD
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
-=======
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
 
  <flight_control name="none"/>
 
@@ -458,18 +340,8 @@
              <independentVar lookup="row">fcs/flap-pos-norm</independentVar>
              <tableData>
                0.00  0.00
-<<<<<<< HEAD
-<<<<<<< HEAD
-               0.50  0.20
-               1.00  0.35
-=======
                0.50  0.40
                1.00  0.70
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
-=======
-               0.50  0.40
-               1.00  0.70
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
              </tableData>
            </table>
        </product>
@@ -619,24 +491,6 @@
          </product>
     </function>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<!--
-    <function name="aero/coefficient/CDinlet">
-       <description>Drag_due_to_engine_inlet_spillage</description>
-         <product>
-           <property>aero/qbar-psf</property>
-           <property>metrics/Sw-sqft</property>
-           <property>systems/chute/unfurl-norm</property>
-           <value>0.63</value>
-         </product>
-    </function>
--->
-
-=======
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
-=======
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
   </axis>
 
   <axis name="SIDE">
@@ -816,12 +670,4 @@
 
  </aerodynamics>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 </fdm_config>
-=======
-</fdm_config>
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2
-=======
-</fdm_config>
->>>>>>> c9f8594... MiG-21bis updated to version 1.3.2

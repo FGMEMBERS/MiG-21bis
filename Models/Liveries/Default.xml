@@ -2,16 +2,16 @@
 
 <PropertyList>
 
-<sim>
-<model>
-<livery>
-<name type="string">Croatian Air Force (War)</name>
-<texture>Liveries/Default.png</texture>
-</livery>
-<livery-logo>
-<texture>Liveries/Default.png</texture>
-</livery-logo>
-</model>
-</sim>
+    <sim>
+        <model>
+            <livery>
+                <name type="string">Croatian Air Force (low vis)</name>
+                <texture>Liveries/Default.png</texture>
+            </livery>
+            <livery-logo>
+                <texture>Liveries/Default.png</texture>
+            </livery-logo>
+        </model>
+    </sim>
 
 </PropertyList>

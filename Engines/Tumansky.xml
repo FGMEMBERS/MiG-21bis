@@ -1,19 +1,20 @@
 <?xml version="1.0"?>
 
-<turbine_engine name="Turmansky">
-  <milthrust>    9914.0 </milthrust>
-  <maxthrust>   14994.0 </maxthrust>
+<turbine_engine name="Tumansky">
+  <milthrust>    9050.0 </milthrust>
+  <maxthrust>   15650.0 </maxthrust>
   <bypassratio>     1.0 </bypassratio>
-  <tsfc>            0.85</tsfc>
-  <atsfc>           2.12</atsfc>
+  <tsfc>            0.96</tsfc>
+  <atsfc>           2.21</atsfc>
   <bleed>           0.03</bleed>
   <idlen1>         30.0 </idlen1>
   <idlen2>         65.0 </idlen2>
   <maxn1>         100.0 </maxn1>
-  <maxn2>         100.0 </maxn2>
+  <maxn2>         105.0 </maxn2>
   <augmented>         1 </augmented>
   <augmethod>         1 </augmethod>
-  <injected>          0 </injected>
+  <injected>          1 </injected>
+  <injection-time> 180.0 </injection-time>
 
   <function name="IdleThrust">
    <table>
@@ -67,6 +68,18 @@
      1.8    0       0       0       0.7600  0.7500  0.5300  0.3300  0
      2.0    0       0       0       0       0       0.6400  0.5700  0
      2.2    0       0       0       0       0       0       0.5740  0
+    </tableData>
+   </table>
+  </function>
+
+  <function name="Injection">
+   <table>
+    <independentVar lookup="row">velocities/mach</independentVar>
+    <independentVar lookup="column">atmosphere/density-altitude</independentVar>
+    <tableData>
+            0       10000    15000	
+     0.0    1.41    1.41     1.0
+     1.0    1.41    1.41     1.0
     </tableData>
    </table>
   </function>
